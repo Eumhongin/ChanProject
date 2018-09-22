@@ -1,0 +1,61 @@
+@import "../font/font.css";
+@import "core.css";
+header{
+  font-size: 1.5vw;
+}
+
+/* Panel1 Start */
+.Panel1background{
+
+}
+.Panel1{
+  width: 100%;
+}
+.P1_Item1{
+  width: 30%;
+  position: relative;
+  font-size: 3vw;
+  line-height: 1.1;
+}
+.P1_OurStory{
+  position: absolute;
+  font-size: 1.2vw;
+}
+.P1_OurStory > img{
+  width: 4%;
+}
+.P1_OurStory>a{
+  margin-left: 6%;
+  width: 90%;
+  text-decoration: none;
+  color:black;
+}
+.P1_OurStory>a:hover{
+  background-color: black;
+  color:white;
+}
+.P1_Item2{
+  margin-top:10%;
+  margin-left: 10%;
+  font-family: sans-serif;
+  font-weight: lighter;
+  width: 15%;
+  position: sticky;
+}
+.P1_TT{
+  position: absolute;
+  width: 20%;
+}
+.P1_TT > img{
+  width: 100%;
+}
+.P1_Img_D{
+  width: 21%;
+}
+.P1_Img_D > img{
+  width:100%;
+}
+/* Panel2 Start */
+.Panel2{
+
+}
