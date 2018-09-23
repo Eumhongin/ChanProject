@@ -1,2 +1,35 @@
 @import "../font/font.css";
 @import "core.css";
+
+.top{
+  margin-top: 5%;
+}
+.title{
+  font-size: 3vw;
+  margin-left: 5%;
+}
+.AD{
+  border: solid rgb(194, 194, 194) 3px;
+}
+.Dropdown{
+  margin-top: 5%;
+
+}
+.Dropdown > *{
+  margin:0 auto;
+  margin-left: 5%;
+  height: 30px;
+  width: 28%;
+}
+.Major_Department{
+  text-align: center;
+  margin-top: 2%;
+  border: solid rgb(194, 194, 194) 3px;
+  margin-left: 2%;
+
+}
+.iframe{
+  margin-left: 2%;
+  margin-top:2%;
+  border:1px solid black;
+}

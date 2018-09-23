@@ -4,8 +4,48 @@
     <meta charset="utf-8">
     <title></title>
     <script src="js/jquery-min.js" charset="utf-8"></script>
-  </head>
-  <body>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript">
+    $(document).ready(function(){
 
+    });
+
+    </script>
+  </head>
+  <body class="container">
+      <div class="top row col-1">
+        <div class="title col-3">
+          <span>면접 검색엔진</span>
+        </div>
+        <div class="AD col-2">
+          <img src="" alt="광고">
+        </div>
+      </div>
+      <div class="Dropdown row col-1">
+        <select id="D_Lev1" class="D_Lev1 col-4" name="">
+          <option value="0" selected>전체</option>
+          <option value="1">공학</option>
+          <option value="2">예체능</option>
+          <option value="3">의학</option>
+          <option value="4">인문사회</option>
+          <option value="5">자연과학</option>
+        </select>
+        <select id="D_Lev2" class="D_Lev2 col-4" name="">
+          <option value="0" selected>전체</option>
+          <option value="1">건설</option>
+          <option value="2">교육</option>
+        </select>
+
+        <select id="D_Lev3" class="D_Lev3 col-4" name="">
+          <option value="0" selected>전체</option>
+          <option value="1">건축공학</option>
+          <option value="2">교육</option>
+        </select>
+      </div>
+      <div class="Major_Department col-1">
+        주요학과
+      </div>
+      <iframe class="iframe hide"></iframe>
+      <script src="js/index.js" charset="utf-8"></script>
   </body>
 </html>
