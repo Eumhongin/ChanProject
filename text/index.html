@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="js/jquery-min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.main').css({
+        'width':$(window).outerWidth()*0.8+'px'
+      });
+      $('.main > *').css({
+        'width':$('.main').outerWidth()*0.5+'px',
+        'height':$('.main').outerHeight()+'px'
+      });
+
+      $('.main-right').css({
+        'left':$('.main-left').outerWidth()+'px'
+      });
+      $('.main-left').mouseover(function(){
+        if(!$(this).hasClass('active')){
+          $('.main-right').removeClass('active');
+          $('.main-left').addClass('active');
+          $('.active > p').animate({
+            'opacity':'0',
+            'top':'0px'
+          },300,'swing');
+          $('.active').animate({
+            'width':$('.main').outerWidth()*0.6+'px'
+          },300,'swing');
+          $('.main-right').animate({
+            'width':$('.main').outerWidth()*0.4+'px',
+            'left':$('.main').outerWidth()*0.6+'px'
+          },300,'swing');
+        }
+      });
+      $('.main-right').mouseover(function(){
+        if(!$(this).hasClass('active'))
+        $('.main-left').removeClass('active');
+        $('.main-right').addClass('active');
+        $('.active').animate({
+          'width':$('.main').outerWidth()*0.6+'px',
+          'left':$('.main').outerWidth()*0.4+'px'
+        },300,'swing');
+        $('.main-left').animate({
+          'width':$('.main').outerWidth()*0.4+'px'
+        },300,'swing');
+      });
+      // $('.active').mouseout(function(){
+      //   $('.active').animate({
+      //     'width':$('.main').outerWidth()*0.5+'px'
+      //   },300,'swing');
+      //   $('this').removeClass('active');
+      //
+      // });
+    });
+
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-left">
+        <p>Samsung SDS<br>Private Cloud</p>
+      </div>
+      <div class="main-right">
+        <p>Public Cloud<br>Managed Service</p>
+      </div>
+
+    </div>
+  </body>
+</html>

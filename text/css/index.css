@@ -1,0 +1,32 @@
+html,body{
+  margin:0;
+  padding:0;
+
+}
+.row > *{
+  float: left;
+}
+.row:after{
+    box-sizing: content-box;
+    clear: both;
+    display: block;
+}
+.main{
+  position: relative;
+  height: 400px;
+  margin:0 auto;
+  background-image: url('https://image.samsungsds.com/global/ko/solutions/bns/cloud/double/__icsFiles/afieldfile/2018/05/14/cnt_bns_cloud_desc.jpg?queryString=20180928093973');
+
+}
+.main > *{
+  position: absolute;
+  color: white;
+  font-size: 2vw;
+  font-weight: bold;
+}
+.main-left{
+  border-right:1px solid rgb(198, 197, 195);
+}
+p{
+  margin-left: 5%;
+}

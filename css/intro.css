@@ -22,8 +22,6 @@ iframe{
 .Question_tag{
   position: relative;
   font-size: 2vw;
-
-
   border:5px solid rgb(201, 201, 201);
 }
 .Question_tag:hover{
@@ -35,4 +33,11 @@ iframe{
   right: 2%;
   bottom: 10%;
   color: rgb(120, 187, 78);
+}
+.Q1_content li{
+  font-size: 1.2vw;
+  line-height: 2;
+}
+.Q1{
+  padding-bottom:5%;
 }

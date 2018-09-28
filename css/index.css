@@ -15,21 +15,100 @@
   margin-top: 5%;
 
 }
-.Dropdown > *{
+.Dropdown > *:nth-child(-n+3){
   margin:0 auto;
-  margin-left: 5%;
-  height: 30px;
+  margin-left: 2%;
   width: 28%;
+}
+.Dropdown > *:nth-child(n+2){
+  margin-left: 4%
+}
+.Dropdown > button{
+  position: absolute;
+  width: 5%;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 18px;
+  background: white;
+  border-radius: 3px;
+  border:1px solid rgb(159, 159, 159);
+}
+.Dropdown > button:hover{
+  box-shadow: 0 2px 5px rgb(209, 209, 209);
+}
+select {
+
+    height: 40px;
+    padding-left: 10px;
+    font-size: 18px;
+
+    border-radius: 3px;
 }
 .Major_Department{
   text-align: center;
-  margin-top: 2%;
-  border: solid rgb(194, 194, 194) 3px;
+  margin-top: 5%;  
   margin-left: 2%;
-
+  padding:3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  position: relative;
 }
 .iframe{
   margin-left: 2%;
   margin-top:2%;
   border:1px solid black;
 }
+
+#container{
+
+  width: 100%;
+  height: 100%;
+  padding:0;
+  margin:0;
+}
+
+
+
+
+
+
+
+
+
+/* .Electronic{
+right: 10%;
+top:5%;
+padding:2%;
+}
+.Computer{
+left: 24%;
+bottom:1%;
+}
+.SocialWalfare{
+left: 10%;
+top: 5%;
+}
+.machine{
+right: 20%;
+bottom: 5%;
+}
+.economy{
+left: 50%;
+top:20%;
+}
+.Operation{
+bottom:5%;
+left: 2%;
+}
+.Architecture{
+left: 40%;
+top:30%;
+}
+.Nurce{
+left: 50%;
+bottom:10%;
+}
+.Psyco{
+left: 30%;
+top:5%;
+} */

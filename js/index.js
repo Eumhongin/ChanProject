@@ -1,7 +1,6 @@
-
-var Engeneering = ['건설','교육','기계','산업안전','재료','전기전자컴퓨터','화공고분자에너지'];
-Engeneering[0] = ['건축공학','건축학','도시공학','조경학','토목공학','환경공학'];
-Engeneering[1] = ['교양공학','중등공학교육'];
+var Engeneering = ['건설', '교육', '기계', '산업안전', '재료', '전기전자컴퓨터', '화공고분자에너지'];
+Engeneering[0] = ['건축공학', '건축학', '도시공학', '조경학', '토목공학', '환경공학'];
+Engeneering[1] = ['교양공학', '중등공학교육'];
 //console.log(Engeneering[1][1]);
 
 /*
@@ -52,41 +51,106 @@ $('.AD').css({
   'height': parseInt($('.title').css('height')) * 1.5 + 'px'
 });
 $('.Major_Department').css({
-  'height': $(window).outerHeight() - $('.top').outerHeight(true) - $('.Dropdown').outerHeight(true) - $(window).outerHeight() * 0.05 + 'px'
+  'height': $(window).outerHeight()*1.3 - $('.top').outerHeight(true) - $('.Dropdown').outerHeight(true) - $(window).outerHeight() * 0.2 + 'px'
 });
-$('.iframe').css({
-  'height': $(window).outerHeight() * 0.5 + 'px',
-  'width': $('.Major_Department').outerWidth()+'px'
-});
+// $('.iframe').css({
+//   'height': $(window).outerHeight() * 0.5 + 'px',
+//   'width': $('.Major_Department').outerWidth() + 'px'
+// });
 
 
 
 var num1;
 var num2;
 var num3;
-$('.D_Lev1').change(function(){
+$('.D_Lev1').change(function() {
 
-  console.log($('#'+$(this).attr('id')+' > :selected').val());
-  console.log($('#'+$(this).attr('id')+' > :selected').text());
-  num1 = $('#'+$(this).attr('id')+' > :selected').text();
+  console.log($('#' + $(this).attr('id') + ' > :selected').val());
+  console.log($('#' + $(this).attr('id') + ' > :selected').text());
+  num1 = $('#' + $(this).attr('id') + ' > :selected').text();
   //console.log($(':selected').text());
 });
-$('.D_Lev2').change(function(){
+$('.D_Lev2').change(function() {
 
-  console.log($('#'+$(this).attr('id')+' > :selected').val());
-  console.log($('#'+$(this).attr('id')+' > :selected').text());
+  console.log($('#' + $(this).attr('id') + ' > :selected').val());
+  console.log($('#' + $(this).attr('id') + ' > :selected').text());
   //console.log($(':selected').text());
   console.log(num1);
-  num2 = $('#'+$(this).attr('id')+' > :selected').text();
+  num2 = $('#' + $(this).attr('id') + ' > :selected').text();
 });
-$('.D_Lev3').change(function(){
-console.log($('#' + $(this).attr('id') + ' > :selected').val());
-console.log($('#' + $(this).attr('id') + ' > :selected').text());
-num3 = $('#' + $(this).attr('id') + ' > :selected').text();
-//console.log($(':selected').text());
-$('.iframe').attr({
-  'src': 'introduce/' + num1 + '_' + num2 + '_' + num3 + '.html'
+$('.D_Lev3').change(function() {
+  console.log($('#' + $(this).attr('id') + ' > :selected').val());
+  console.log($('#' + $(this).attr('id') + ' > :selected').text());
+  num3 = $('#' + $(this).attr('id') + ' > :selected').text();
+  //$('.Major_Department').addClass('hide');
+  //console.log($(':selected').text());
+
+
+  // 옵션선택되면 바로 페이지 이동함
+  // document.location.href = 'introduce/' + num1 + '_' + num2 + '_' + num3 + '.html';
+
+  // $('.iframe').attr({
+  //   'src': 'introduce/' + num1 + '_' + num2 + '_' + num3 + '.html'
+  // });
+  // $('.iframe').removeClass('hide');
 });
-$('.iframe').removeClass('hide');
+$('.Dropdown > button').css({
+  'right':($(window).outerWidth()-$('.Major_Department').outerWidth(true))*0.45+'px'
 });
-$()
+$('.Dropdown > button').click(function(){
+  document.location.href = 'introduce/' + num1 + '_' + num2 + '_' + num3 + '.html';
+});
+
+// $('.MD_Shield').css({
+//   'height': $('.Major_Department').css('height')
+// });
+// $('.MD_Shield > div:nth-child(-n+3)').css({
+//   'width': $('.Major_Department').outerWidth() * 0.08 + 'px',
+//   'height': $('.Major_Department').outerWidth() * 0.08 + 'px'
+// });
+// $('.MD_Shield > div:nth-child(n+4):nth-child(-n+7)').css({
+//   'width': $('.Major_Department').outerWidth() * 0.13 + 'px',
+//   'height': $('.Major_Department').outerWidth() * 0.13 + 'px'
+// });
+// $('.MD_Shield > div:nth-child(n+8):nth-child(-n+9)').css({
+//   'width': $('.Major_Department').outerWidth() * 0.2 + 'px',
+//   'height': $('.Major_Department').outerWidth() * 0.2 + 'px'
+// });
+
+anychart.onDocumentReady(function() {
+  var text =
+  "물리 물리 물리 물리 물리 생물 물리 화학 생물 컴퓨터 전자공학 기계공학 기계공학 전자공학 컴퓨터 물리 생물 경영 경제 사회 사회 건축 간호 심리 유아 아동 유아 아동 수의예 의예 의예 간호 수의예 환경공학 환경공학 인문 자율 인문 자율 자율 철학 독어독문 노어노문 경제통상 무역 무역 경제통상 사회과학 지리 전자공학 전자공학 전자공학 전자공학 영어교육 물리 응용생명 국어국문 전자공학 영어교육 통계학 수학교육 지질 전자공학 중어중문 경제통상 천문대기과학 독어독문 환경공학 화학교육 금속신소재 불어불문 의예과 화학 신문방송 물리교육 건축 경제통상 수의예 사회복지 물리 윤리교육 신소재 전자공학 화학교육 경영 정치외교 영어영문 역사교육 생물교육 간호 국어국문 생명 물리 조경 토목 물리교육 경영 응용생명 경영 의류 독어독문 간호 고분자 식품공학 아동가족 전자공학 영어영문 조경 영어교육 전자공학 경제통상 사회 역사교육 토목 간호 경제통상 전자공학 화학공학 간호 식품영양 건축 불어교육 농업경제 철학 조경 물리교육 한문 아동가족 경영 환경공학 노어노문 응용화학 의류 간호 생명공학 에너지공학 지리 교육 식품공학 경영 경영 수의예 지구과학교육 국어교육 건축공학 천문대기 환경공학 에너지공학 전자공학 간호 생명공학 독어독문 기계공학 간호 간호 간호 간호 간호 간호 간호 간호 간호 간호 간호 간호 간호 간호"+
+  " 컴퓨터 컴퓨터 컴퓨터 컴퓨터 컴퓨터 컴퓨터 컴퓨터"+
+  " 전자공학 전자공학 전자공학 전자공학 전자공학 전자공학 전자공학"+
+  " 사회복지 사회복지 사회복지 사회복지 사회복지 사회복지"+
+  " 기계공학 기계공학 기계공학 기계공학 기계공학 기계공학"+
+  " 경영 경영 경영 경영 경영 경영"+
+  " 경제 경제 경제 경제 경제 경제"+
+  " 건축 건축 건축 건축 건축"+
+  " 간호 간호 간호 간호 간호"+
+  " 심리 심리 심리 심리 심리"
+
+
+  // create a chart
+  chart = anychart.tagCloud();
+
+
+  // configure angles
+  chart.angles([0]);
+
+  // set 전자공학 parsing mode
+  chart.data(text, {
+    mode: "by-word"
+  });
+
+  // set 전자공학 chart title
+  // chart.listen("chartDraw", function() {
+  //   chart.title("Tag Cloud Chart: Mode = " + chart.mode());
+  // });
+
+  // set 전자공학 container id
+  chart.container("container");
+
+  // initiate drawing 전자공학 chart
+  chart.draw();
+});
