@@ -4,11 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <script src="js/jquery-min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="css/index.css">
   <script type="text/javascript">
     $(document).ready(function() {
-
+      $('.D_Lev1 > option:nth-child(1)').prop('selected', true);
+      $('<option value="0" selected>').text('중분류').appendTo('.D_Lev2');
+      $('<option value="0" selected>').text('소분류').appendTo('.D_Lev3');
     });
   </script>
   <script src="https://static.anychart.com/js/8.0.1/anychart-core.min.js"></script>
@@ -23,71 +26,36 @@
     <div class="AD col-2">
       <img src="" alt="광고">
     </div>
-  </div>
-  <div class="Dropdown row col-1">
-    <select id="D_Lev1" class="D_Lev1 col-4" name="">
-          <option value="0" selected>전체</option>
-          <option value="1">공학</option>
-          <option value="2">예체능</option>
-          <option value="3">의학</option>
-          <option value="4">인문사회</option>
-          <option value="5">자연과학</option>
-        </select>
-    <select id="D_Lev2" class="D_Lev2 col-4" name="">
-          <option value="0" selected>전체</option>
-          <option value="1">건설</option>
-          <option value="2">교육</option>
-        </select>
-
-    <select id="D_Lev3" class="D_Lev3 col-4" name="">
-          <option value="0" selected>전체</option>
-          <option value="1">건축공학</option>
-          <option value="2">교육</option>
-        </select>
-    <button type="button" name="button">찾기</button>
-  </div>
-  <div class="Major_Department col-1">
-    <!-- lev1 -->
-    <div id="container">
-
     </div>
-    <!-- <div class="MD_Shield">
+    <div class="Dropdown row col-1">
+      <select id="D_Lev1" class="D_Lev1 col-4" name="">
+          <option value="0" selected>대분류</option>
+          <option value="1">공학</option>
+          <option value="2">의학</option>
+          <option value="3">인문사회</option>
+          <option value="4">자연과학</option>
+        </select>
 
-          <div class="Psyco">
+      <select id="D_Lev2" class="D_Lev2 col-4" name="">
 
-          </div>
-          <div class="Nurce">
 
-          </div>
-          <div class="Architecture">
+        </select>
 
-          </div>
+      <select id="D_Lev3" class="D_Lev3 col-4" name="">
 
-          <div class="Operation">
 
-          </div>
-          <div class="economy">
+        </select>
+      <button type="button" name="button">찾기</button>
+    </div>
+    <div class="Major_Department col-1">
+      <!-- lev1 -->
+      <div id="container">
 
-          </div>
-          <div class="machine">
+      </div>
+    </div>
+    <a id="trig" class="hide"></a>
 
-          </div>
-          <div class="SocialWalfare">
-
-          </div>
-
-          <div class="Electronic">
-
-          </div>
-          <div class="Computer">
-            컴퓨터
-
-          </div>
-        </div> -->
-  </div>
-  <a id="trig" class="hide"></a>
-  <!-- <iframe class="iframe hide"></iframe> -->
-  <script src="js/index.js" charset="utf-8"></script>
+    <script src="js/index.js" charset="utf-8"></script>
 </body>
 
 </html>

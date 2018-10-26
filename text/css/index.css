@@ -1,32 +1,57 @@
-html,body{
-  margin:0;
-  padding:0;
-
+html, body {
+  margin: 0;
+  padding: 0;
 }
-.row > *{
+
+.row>* {
   float: left;
 }
-.row:after{
-    box-sizing: content-box;
-    clear: both;
-    display: block;
+
+.row:after {
+  box-sizing: content-box;
+  clear: both;
+  display: block;
 }
-.main{
+
+.main {
   position: relative;
   height: 400px;
-  margin:0 auto;
+  margin: 0 auto;
   background-image: url('https://image.samsungsds.com/global/ko/solutions/bns/cloud/double/__icsFiles/afieldfile/2018/05/14/cnt_bns_cloud_desc.jpg?queryString=20180928093973');
-
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.main > *{
+
+.main>* {
   position: absolute;
   color: white;
   font-size: 2vw;
   font-weight: bold;
 }
-.main-left{
-  border-right:1px solid rgb(198, 197, 195);
+
+.main-left {
+  width: 25%;
+  border-right: 1px solid rgb(198, 197, 195);
 }
-p{
-  margin-left: 5%;
+
+p {
+  font-size: 4rem;
+  line-height: 50px;
+  font-weight: bold;
+  max-width: 1130px;
+  padding-bottom: 20px;
+  transform: matrix(1, 0, 0, 1, 0, 1);
+  -webkit-transition: all 0.5s cubic-bezier(1, 0, 0.5, 1) 0.15s;
+  transition: all 0.5s cubic-bezier(1, 0, 0.5, 1) 0.15s;
+  opacity: 1;
+}
+
+.active {
+  -webkit-transition: all 0.5s cubic-bezier(1, 0, 0.5, 1) 0.15s;
+  transition: all 0.5s cubic-bezier(1, 0, 0.5, 1) 0.15s;
+  opacity: 0;
+  transform: matrix(1, 0, 0, 1, 0, -50);
+}
+.actived{
+  width: 41%;
 }
