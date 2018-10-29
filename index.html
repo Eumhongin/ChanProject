@@ -27,26 +27,26 @@
       <img src="" alt="광고">
     </div>
     </div>
-    <div class="Dropdown row col-1">
-      <select id="D_Lev1" class="D_Lev1 col-4" name="">
+    <form class="Dropdown row col-1" method="post" action="introduce/model.php">
+      <select id="D_Lev1" class="D_Lev1 col-4" name="lev1">
           <option value="0" selected>대분류</option>
-          <option value="1">공학</option>
-          <option value="2">의학</option>
-          <option value="3">인문사회</option>
-          <option value="4">자연과학</option>
+          <option value="공학">공학</option>
+          <option value="의학">의학</option>
+          <option value="인문사회">인문사회</option>
+          <option value="자연과학">자연과학</option>
         </select>
 
-      <select id="D_Lev2" class="D_Lev2 col-4" name="">
-
-
-        </select>
-
-      <select id="D_Lev3" class="D_Lev3 col-4" name="">
+      <select id="D_Lev2" class="D_Lev2 col-4" name="lev2">
 
 
         </select>
-      <button type="button" name="button">찾기</button>
-    </div>
+
+      <select id="D_Lev3" class="D_Lev3 col-4" name="lev3">
+
+
+        </select>
+      <button type="submit" name="button">찾기</button>
+    </form>
     <div class="Major_Department col-1">
       <!-- lev1 -->
       <div id="container">

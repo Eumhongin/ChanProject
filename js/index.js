@@ -46,13 +46,13 @@ var num3;
 
 function FinalLevelSpreding(lev1, lev2) {
   var pick;
-  if (lev1 == 1) {
+  if (lev1 == '공학') {
     pick = Engeneering;
-  } else if (lev1 == 2) {
+  } else if (lev1 == '의학') {
     pick = Medical;
-  } else if (lev1 == 3) {
+  } else if (lev1 == '인문사회') {
     pick = Social;
-  } else if (lev1 == 4) {
+  } else if (lev1 == '자연과학') {
     pick = Science;
   } else {
     console.log('error in FinalLevelSpreding Function!!');
@@ -61,42 +61,47 @@ function FinalLevelSpreding(lev1, lev2) {
   $('<option value="0" selected>').text("소분류").appendTo('#D_Lev3');
   for (let i = 0; i < pick[parseInt(lev2) - 1].length; i++) {
     let tt = i + 1;
-    $('<option value=' + tt + '>').text(pick[parseInt(lev2) - 1][i]).appendTo('#D_Lev3');
+    $('<option value=' + pick[parseInt(lev2) - 1][i] + '>').text(pick[parseInt(lev2) - 1][i]).appendTo('#D_Lev3');
   }
 }
 $('.D_Lev1').change(function() {
   //다음 option 설정
-  if ($('#' + $(this).attr('id') + ' > :selected').val() == 1) {
+  if ($('#' + $(this).attr('id') + ' > :selected').val() == '공학') {
     $('.D_Lev2 > *').remove();
     $('<option value="0" selected>').text("중분류").appendTo('#D_Lev2');
+    console.log('pass! eng');
     for (let i = 0; i < Engeneering.length; i++) {
       let tt = i + 1;
-      $('<option value=' + tt + ' name=' + 1 + tt + '>').text(Represent_Eng[i]).appendTo('#D_Lev2');
+      $('<option value=' + Represent_Eng[i] + ' name=' + tt + '>').text(Represent_Eng[i]).appendTo('#D_Lev2');
     }
-  } else if ($('#' + $(this).attr('id') + ' > :selected').val() == 2) {
+  } else if ($('#' + $(this).attr('id') + ' > :selected').val() == '의학') {
+    console.log('pass! medical');
     $('.D_Lev2 > *').remove();
     $('<option value="0" selected>').text("중분류").appendTo('#D_Lev2');
     for (let i = 0; i < Medical.length; i++) {
       let tt = i + 1;
-      $('<option value=' + tt + ' name=' + 1 + tt + '>').text(Represent_Medical[i]).appendTo('#D_Lev2');
+      $('<option value=' + Represent_Medical[i] + ' name=' + tt + '>').text(Represent_Medical[i]).appendTo('#D_Lev2');
     }
-  } else if ($('#' + $(this).attr('id') + ' > :selected').val() == 3) {
+  } else if ($('#' + $(this).attr('id') + ' > :selected').val() == '인문사회') {
+    console.log('pass! social');
     $('.D_Lev2 > *').remove();
     $('<option value="0" selected>').text("중분류").appendTo('#D_Lev2');
     for (let i = 0; i < Social.length; i++) {
       let tt = i + 1;
-      $('<option value=' + tt + ' name=' + 1 + tt + '>').text(Represent_Social[i]).appendTo('#D_Lev2');
+      $('<option value=' + Represent_Social[i] + ' name=' + tt + '>').text(Represent_Social[i]).appendTo('#D_Lev2');
     }
-  } else if ($('#' + $(this).attr('id') + ' > :selected').val() == 4) {
+  } else if ($('#' + $(this).attr('id') + ' > :selected').val() == '자연과학') {
+    console.log('pass! science');
     $('.D_Lev2 > *').remove();
     $('<option value="0" selected>').text("중분류").appendTo('#D_Lev2');
     for (let i = 0; i < Science.length; i++) {
       let tt = i + 1;
-      $('<option value=' + tt + ' name=' + 1 + tt + '>').text(Represent_Science[i]).appendTo('#D_Lev2');
+      $('<option value=' + Represent_Science[i] + ' name='+ tt + '>').text(Represent_Science[i]).appendTo('#D_Lev2');
     }
   } else {
-    alert('Error in D_Lev2');
-    location.href = "404.html";
+    console.log('pass! else');
+    // alert('Error in D_Lev2');
+    // location.href = "404.html";
   }
   // console.log($('#' + $(this).attr('id') + ' > :selected').val());
   // console.log($('#' + $(this).attr('id') + ' > :selected').text());
@@ -104,7 +109,7 @@ $('.D_Lev1').change(function() {
   //console.log($(':selected').text());
 });
 $('.D_Lev2').change(function() {
-  FinalLevelSpreding($('.D_Lev1 > :selected').val(), $('#' + $(this).attr('id') + ' > :selected').val());
+  FinalLevelSpreding($('.D_Lev1 > :selected').val(), $('#' + $(this).attr('id') + ' > :selected').attr('name'));
   console.log($('.D_Lev1 > :selected').val() + "_" + $('.D_Lev2 > :selected').val());
   console.log($('#' + $(this).attr('id') + ' > :selected').val());
   console.log($('#' + $(this).attr('id') + ' > :selected').text());
@@ -125,9 +130,9 @@ $('.D_Lev3').change(function() {
 $('.Dropdown > button').css({
   'right': ($(window).outerWidth() - $('.Major_Department').outerWidth(true)) * 0.45 + 'px'
 });
-$('.Dropdown > button').click(function() {
-  document.location.href = 'introduce/' + num1 + '_' + num2 + '_' + num3 + '.html';
-});
+// $('.Dropdown > button').click(function() {
+//   document.location.href = 'introduce/' + num1 + '_' + num2 + '_' + num3 + '.html';
+// });
 
 anychart.onDocumentReady(function() {
   var text =

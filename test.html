@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="js/jquery-min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="font/font.css">
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+      $('.btn').on('click',function(){
+
+        console.log(isNaN($('option').attr('name')));
+        console.log(parseInt($('option').attr('name'))+parseInt($('option').attr('name')));
+
+      });
+    });
+
+    </script>
+    <style media="screen">
+      h1{
+        font-family: 'BMA';
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>안녕하세요 한나체에어입니다 이것이 과연 한나체 에어가 맞습니까???????????</h1>
+    <div class="">
+      안녕하세요 한나체에어입니다 이것이 과연 한나체 에어가 맞습니까???????????
+    </div>
+    <form class="" action="protect.html" method="post">
+      <select class="lev1">
+        <option value="" name = "1">공학</option>
+      </select>
+      <button class="btn" type="button" name="button">check</button>
+      <button type="submit" name="button">Submit</button>
+    </form>
+  </body>
+</html>
