@@ -8,33 +8,36 @@
     <script type="text/javascript">
 
     $(document).ready(function(){
-      $('.btn').on('click',function(){
-
-        console.log(isNaN($('option').attr('name')));
-        console.log(parseInt($('option').attr('name'))+parseInt($('option').attr('name')));
-
+      $('.asd').hover(function(){
+        $(this).css({
+          'transform' : 'matrix(1,0,0,1,400,0)'
+        })
+      },function(){
+        $(this).css({
+          'transform' : 'matrix(1,0,0,1,0,0)'
+        })
       });
     });
 
     </script>
     <style media="screen">
-      h1{
-        font-family: 'BMA';
-      }
+    .asd{
+      width: 100px;
+      height: 100px;
+      background: red;
+      transition: all 0.5s cubic-bezier(0.7,0.3,0.3,0.95) 0.3s;
+      transform : matrix(1,0,0,1,0,0);
+    }
+    /* .asd:hover{
+      transform : matrix(1,0,0,1,100,-50);
+    } */
 
     </style>
   </head>
   <body>
-    <h1>안녕하세요 한나체에어입니다 이것이 과연 한나체 에어가 맞습니까???????????</h1>
-    <div class="">
-      안녕하세요 한나체에어입니다 이것이 과연 한나체 에어가 맞습니까???????????
+    <div class="asd">
+
     </div>
-    <form class="" action="protect.html" method="post">
-      <select class="lev1">
-        <option value="" name = "1">공학</option>
-      </select>
-      <button class="btn" type="button" name="button">check</button>
-      <button type="submit" name="button">Submit</button>
-    </form>
+
   </body>
 </html>
