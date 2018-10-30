@@ -19,7 +19,7 @@
     <hr class="hd_se">
     <section>
       <div class="major box">
-        <h1>전공역량</h1>
+        <h1>전공적합성 관련</h1>
         <hr class="sub_hr">
         <p>tip</p>
         <ol>
@@ -29,7 +29,7 @@
       </div>
       <hr>
       <div class="Academic box">
-        <h1>전공역량</h1>
+        <h1>학업역량 관련</h1>
         <hr class="sub_hr">
         <p>tip</p>
         <ol>
@@ -39,7 +39,7 @@
       </div>
       <hr>
       <div class="dev box">
-        <h1>전공역량</h1>
+        <h1>발전가능성 및 인성 관련</h1>
         <hr class="sub_hr">
         <p>tip</p>
         <ol>
@@ -49,7 +49,7 @@
       </div>
       <hr>
       <div class="free box">
-        <h1>전공역량</h1>
+        <h1>자유질문</h1>
         <hr class="sub_hr">
         <p>tip</p>
         <ol>

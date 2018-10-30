@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>아는게 힘이다! - 면접플러스</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <script src="js/jquery-min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="css/index.css">
@@ -20,42 +20,40 @@
 
 <body class="container">
   <div class="top row col-1">
-    <div class="title col-3">
-      <span>면접 검색엔진</span>
+    <div class="title col-1">
+      <img src="img/logo2.png" alt="">
     </div>
-    <div class="AD col-2">
-      <img src="" alt="광고">
+
+  </div>
+  <form class="Dropdown row col-1" method="post" action="introduce/model.php">
+    <select id="D_Lev1" class="D_Lev1 col-4" name="lev1">
+      <option value="0" selected>대분류</option>
+      <option value="공학">공학</option>
+      <option value="의학">의학</option>
+      <option value="인문사회">인문사회</option>
+      <option value="자연과학">자연과학</option>
+    </select>
+
+    <select id="D_Lev2" class="D_Lev2 col-4" name="lev2">
+
+
+    </select>
+
+    <select id="D_Lev3" class="D_Lev3 col-4" name="lev3">
+
+
+    </select>
+    <button type="submit" name="button">찾기</button>
+  </form>
+  <div class="Major_Department col-1">
+    <!-- lev1 -->
+    <div id="container">
+
     </div>
-    </div>
-    <form class="Dropdown row col-1" method="post" action="introduce/model.php">
-      <select id="D_Lev1" class="D_Lev1 col-4" name="lev1">
-          <option value="0" selected>대분류</option>
-          <option value="공학">공학</option>
-          <option value="의학">의학</option>
-          <option value="인문사회">인문사회</option>
-          <option value="자연과학">자연과학</option>
-        </select>
+  </div>
+  <a id="trig" class="hide"></a>
 
-      <select id="D_Lev2" class="D_Lev2 col-4" name="lev2">
-
-
-        </select>
-
-      <select id="D_Lev3" class="D_Lev3 col-4" name="lev3">
-
-
-        </select>
-      <button type="submit" name="button">찾기</button>
-    </form>
-    <div class="Major_Department col-1">
-      <!-- lev1 -->
-      <div id="container">
-
-      </div>
-    </div>
-    <a id="trig" class="hide"></a>
-
-    <script src="js/index.js" charset="utf-8"></script>
+  <script src="js/index.js" charset="utf-8"></script>
 </body>
 
 </html>

@@ -6,11 +6,13 @@
 }
 .title{
   font-size: 3vw;
-  margin-left: 5%;
+
+  text-align: center;
 }
-.AD{
-  border: solid rgb(194, 194, 194) 3px;
+.title > img{
+  width: 20%;
 }
+
 .Dropdown{
   margin-top: 5%;
 
@@ -46,7 +48,7 @@ select {
 }
 .Major_Department{
   text-align: center;
-  margin-top: 5%;  
+  margin-top: 5%;
   margin-left: 2%;
   padding:3%;
   padding-left: 5%;
