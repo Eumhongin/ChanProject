@@ -1,15 +1,22 @@
 <?php
-  $conn = mysqli_connect("localhost","root","um0723","hong");
+  $conn = mysqli_connect("localhost","root","um0723","interview");
   if(!$conn){
-  echo "connect fail";
+  echo "<script>document.write('<h1>DATABASE CONNECT FAIL</h1>');</script>";
   }else{
   //echo "connect Success";
   }
-  echo "<script>alert('".$_POST['lev3']."');</script>";
+  //echo "<script>alert('".$_POST['lev3']."');</script>";
   $lev3 = $_POST['lev3'];
-  $sql = "SELECT * FROM ex WHERE major = '".$lev3."'";
+	$sql = "SELECT * FROM model_adp WHERE major = '".$lev3."'";
+	$sql1 = "SELECT * FROM model_school WHERE major = '".$lev3."'";
+	$sql2 = "SELECT * FROM model_dev WHERE major = '".$lev3."'";
+	$sql3 = "SELECT * FROM model_free WHERE major = '".$lev3."'";
 
-  $result = mysqli_query($conn,$sql);
+	$result = mysqli_query($conn,$sql);
+	$result1 = mysqli_query($conn,$sql1);
+	$result2 = mysqli_query($conn,$sql2);
+	$result3 = mysqli_query($conn,$sql3);
+	//echo "<script>alert('".$result."');</script>";
 
 ?>
 <!DOCTYPE html>
@@ -46,13 +53,19 @@
         <p>제목위에 마우스를 올리시면 각 질문의 팁을 보실수 있습니다!</p>
         <ol>
           <?php
-          while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
-          echo "<li>".$row["content"]."</li><br>";
-          }
-          ?>
+			$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+			if($row['content'] == ''){
+				echo "<li>내용이 없습니다!</li><br>";
+			}
+			else{
+				echo "<li>".$row["content"]."</li><br>";
+				while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
+					echo "<li>".$row["content"]."</li><br>";
+				}
 
+			}
+			?>
         </ol>
-
       </div>
       <hr>
       <div class="Academic box">
@@ -67,10 +80,20 @@
         <hr class="sub_hr Aca_hr">
         <p>제목위에 마우스를 올리시면 각 질문의 팁을 보실수 있습니다!</p>
         <ol>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-        </ol>
+          <?php
+			$row1=mysqli_fetch_array($result1,MYSQLI_ASSOC);
+			if($row1['content'] == ''){
+				echo "<li>내용이 없습니다!</li><br>";
+			}
+			else{
+				echo "<li>".$row1["content"]."</li><br>";
+				while($row1=mysqli_fetch_array($result1,MYSQLI_ASSOC)){
+					echo "<li>".$row1["content"]."</li><br>";
+				}
 
+			}
+			?>
+        </ol>
       </div>
       <hr>
       <div class="dev box">
@@ -85,10 +108,20 @@
         <hr class="sub_hr dev_hr">
         <p>제목위에 마우스를 올리시면 각 질문의 팁을 보실수 있습니다!</p>
         <ol>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-        </ol>
+          <?php
+			$row2=mysqli_fetch_array($result2,MYSQLI_ASSOC);
+			if($row2['content'] == ''){
+				echo "<li>내용이 없습니다!</li><br>";
+			}
+			else{
+				echo "<li>".$row2["content"]."</li><br>";
+				while($row2=mysqli_fetch_array($result2,MYSQLI_ASSOC)){
+					echo "<li>".$row2["content"]."</li><br>";
+				}
 
+			}
+			?>
+        </ol>
       </div>
       <hr>
       <div class="free box">
@@ -104,16 +137,32 @@
         <hr class="sub_hr free_hr">
         <p>제목위에 마우스를 올리시면 각 질문의 팁을 보실수 있습니다!</p>
         <ol>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-        </ol>
+          <?php
+			$row3=mysqli_fetch_array($result3,MYSQLI_ASSOC);
+			if($row3['content'] == ''){
+				echo "<li>내용이 없습니다!</li><br>";
+			}
+			else{
+				echo "<li>".$row3["content"]."</li><br>";
+				while($row3=mysqli_fetch_array($result3,MYSQLI_ASSOC)){
+					echo "<li>".$row3["content"]."</li><br>";
+				}
 
+			}
+			?>
+        </ol>
       </div>
-      <?php mysqli_close($conn); ?>
+      <?php
+		mysqli_free_result($result);
+		mysqli_free_result($result1);
+		mysqli_free_result($result2);
+		mysqli_free_result($result3);
+		mysqli_close($conn);
+		?>
     </section>
     <footer>
       <span>Copyright @ 면접플러스</span>
     </footer>
-    <script src="../js/intro.js" charset="utf-8"></script>
+	<script src="../js/intro.js" charset="utf-8"></script>
   </body>
 </html>
