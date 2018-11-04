@@ -24,14 +24,8 @@ if($(window).outerWidth() >= '2560'){
     'height':$('.survey_wrap').outerHeight()*0.05+'px'
   });
 
-  $('.delete_content > button').css({
-    'width':$('.content_content > input').outerHeight()+'px',
-    'height':$('.content_content > input').outerHeight()+'px'
 
-  });
-  $('.delete_content').css({
-    'margin-left':parseInt($('.content_content').outerWidth()-$('.content_content > input').outerWidth()-$('.delete_content').outerWidth())*0.8+'px'
-  });
+
 
   $('.plus_btn > button').css({
     'height':$('.plus_btn > button').outerWidth()+'px'
@@ -67,20 +61,21 @@ function content_adding(){
   $(delete_content_btn).css({
     'border-radius': '10px',
     'cursor': 'pointer',
-    'background-image': 'url("../../img/delete_btn.png")',
+    'background-image': 'url("../img/delete_btn.png")',
     'background-repeat': 'no-repeat',
     'background-size': 'cover',
-    'width':$('.content_content > input').outerHeight()+'px',
-    'height':$('.content_content > input').outerHeight()+'px'
+    'width':$('.content_main > input').outerHeight()+'px',
+    'height':$('.content_main > input').outerHeight()+'px'
   });
   $('.survey_wrap').css({
-    'height':$('.survey_wrap').outerHeight()+$('.content').outerHeight()+'px'
+    'height':$('.survey_wrap').outerHeight()+($('.survey_wrap').outerHeight(true)-$('.survey_content').outerHeight())*0.5+'px'
   });
   $('.plus_btn > button').attr({'onclick' : 'content_adding()'});
   //   $('.plus_btn > button').remove();
   //   $('<button type="submit" name="button" onclick="content_adding('+1+changeint+')">').css(btn_css).appendTo('.plus_btn');
   //$(window).scrollTop();
-
+  console.log($(content).offset().top);
+  $('html, body').animate({scrollTop : $(content).offset().top}, 400);
 };
 function content_delete(e){
   //$(this).parents('content').remove();
