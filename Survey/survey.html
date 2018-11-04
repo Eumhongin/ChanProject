@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+  <title>면접플러스 - SurveyRoom</title>
+  <script src="../js/jquery-min.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" href="sub_src/survey.css">
+</head>
+
+<body>
+  <div class="Sub_Back">
+    <!-- 배경  #27C8BE-->
+  </div>
+  <header>
+    <div class="Back">
+      <img src="" alt="뒤로가기">
+      <span>뒤로가기</span>
+    </div>
+    <h1>면접플러스</h1>
+  </header>
+
+  <div class="survey_wrap">
+    <form class="survey_content" action="dlstjxm.php" method="post">
+      <p>
+        <질문지>
+      </p>
+      <hr>
+      <!-- 대학교 학과 -->
+      <div class="content_s row">
+        <div class="left">
+          <p>면접을 본 대학교!</p>
+          <input type="text" name="" value="">
+        </div>
+        <div class="right">
+          <p>면접을 본 학과!</p>
+          <input type="text" name="" value="">
+        </div>
+      </div>
+
+      <hr>
+      <!-- 질문 -->
+      <div class="content_control">
+        <div class="content">
+          <div class="content_main">
+            <p>면접 질문</p>
+            <input type="text" name="" value="">
+          </div>
+        </div>
+
+      </div>
+      <div class="plus_btn">
+        <button type="button" name="button" onclick="content_adding()"></button>
+      </div>
+      <div class="submit_btn">
+        <button type="submit" name="button">보내기</button>
+      </div>
+
+    </form>
+
+  </div>
+  </div>
+
+  <script src="sub_src/survey.js" charset="utf-8"></script>
+</body>
+
+</html>

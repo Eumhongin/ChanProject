@@ -1,0 +1,139 @@
+@import "../../font/font.css";
+@import "../../css/core.css";
+
+*{
+  position: relative;
+  z-index:999;
+}
+body {
+  background-color: #E3E3E3;
+
+}
+input{
+  padding:0;
+  margin:0;
+  font-family: 'BMA';
+  width: 100%;
+  font-size: 20px;
+  transition: 0.2s;
+}
+input:hover{
+  box-shadow: 0 3px 5px #A5A5A5;
+  border:0;
+
+}
+button{
+  border:none;
+  background-color: white;
+}
+.Sub_Back{
+  position: absolute;
+  background-color: #27C8BE;
+  width: 100%;
+  /* min-height: 500px; */
+  z-index: 0;
+}
+.Back{
+  cursor: pointer;
+}
+
+header > h1{
+  margin:0;
+  text-align: center;
+  font-size: 6.5vw;
+  display: block;
+  padding:5%;
+  padding-top:0;
+  color: white;
+
+}
+.survey_wrap{
+  width: 60%;
+  margin:0 auto;
+  background-color: white;
+  box-shadow: 0 3px 5px #A5A5A5;
+  border-radius: 10px;
+  padding-top:20px;
+  margin-bottom:10%;
+}
+.survey_content{
+  width: 80%;
+  margin:0 auto;
+}
+.survey_content > p{
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+}
+.survey_content > hr{
+  width: 80%;
+  border:1px solid black;
+}
+.left{
+  float: left;
+  margin:0;
+  padding:0;
+  width: 45%;
+  margin-bottom: 5%;
+
+}
+.left > p,.right > p{
+  font-size: 1.2vw;
+}
+.right{
+  float: left;
+  margin:0;
+  padding:0;
+  margin-left: 10%;
+  width: 45%;
+  margin-bottom: 5%;
+}
+.content p{
+  font-size: 1.2vw;
+  position: sticky;
+}
+.content_content > input{
+  width: 80%;
+  float: left;
+}
+.delete_content{
+  width: 10%;
+  float: left;
+}
+.delete_content > button{
+  border-radius: 10px;
+  cursor: pointer;
+  background-image: url('../../img/delete_btn.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.delete_content > button:hover{
+  box-shadow: 0 3px 5px #A5A5A5;
+}
+.plus_btn,.submit_btn{
+  margin:5% 0 5% 0;
+  text-align: center;
+}
+.plus_btn > button{
+  width: 5%;
+  border-radius: 10px;
+  background-image: url('../../img/plus_btn.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+
+}
+.plus_btn > button:hover{
+  box-shadow: 0 3px 5px #A5A5A5;
+}
+.submit_btn > button{
+  cursor: pointer;
+  font-size: 1.2vw;
+  font-family: 'bma';
+  width: 20%;
+  border-radius: 8px;
+  border:1px solid rgb(128, 128, 128);
+}
+.submit_btn > button:hover{
+    box-shadow: 0 3px 5px #A5A5A5;
+}
