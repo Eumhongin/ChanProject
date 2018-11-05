@@ -32,11 +32,11 @@
       <div class="content_s row">
         <div class="left">
           <p>면접을 본 대학교!</p>
-          <input type="text" name="" value="">
+          <input type="text" name="Univ" value="">
         </div>
         <div class="right">
           <p>면접을 본 학과!</p>
-          <input type="text" name="" value="">
+          <input type="text" name="Major" value="">
         </div>
       </div>
 
@@ -46,17 +46,18 @@
         <div class="content">
           <div class="content_main">
             <p>면접 질문</p>
-            <input type="text" name="" value="">
+            <input type="text" name="question0" value="">
           </div>
         </div>
 
       </div>
       <div class="plus_btn">
-        <button type="button" name="button" onclick="content_adding()"></button>
+        <button type="button" name="button" onclick="content_adding(0)"></button>
       </div>
       <div class="submit_btn">
         <button type="submit" name="button">보내기</button>
       </div>
+      <input class="checklength" style="display:none" type="text" name="length" value="1">
 
     </form>
 

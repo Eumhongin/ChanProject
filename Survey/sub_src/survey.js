@@ -37,14 +37,14 @@ if($(window).outerWidth() >= '2560'){
     'height':$('.survey_content').outerHeight()*1.2+'px'
   });
 });
-function content_adding(){
-  // let changeint = number+2;
+function content_adding(number){
+  let changeint = 1+number;
 
   let content = $('<div>').addClass('content').appendTo('.content_control');
   let content_main = $('<div>').addClass('content_main').appendTo(content);
   let content_main_p = $('<p>').text('면접 질문').appendTo(content_main);
   let content_content = $('<div>').addClass('content_content row').appendTo(content_main);
-  let content_content_input = $('<input type="text" name="" value="">').appendTo(content_content);
+  let content_content_input = $('<input type="text" name="question'+changeint+'" value="">').appendTo(content_content);
   let delete_content = $('<div>').addClass('delete_content').appendTo(content_content);
   let delete_content_btn = $('<button type="button" name="button" onclick="content_delete(this)">').appendTo(delete_content);
   console.log($('.content').outerHeight());
@@ -67,21 +67,35 @@ function content_adding(){
     'width':$('.content_main > input').outerHeight()+'px',
     'height':$('.content_main > input').outerHeight()+'px'
   });
+  console.log('survey height : '+ $('.survey_wrap').outerHeight());
+  console.log('content : '+$(content).outerHeight());
   $('.survey_wrap').css({
-    'height':$('.survey_wrap').outerHeight()+($('.survey_wrap').outerHeight(true)-$('.survey_content').outerHeight())*0.5+'px'
+    'height':$('.survey_wrap').outerHeight()+$(content).outerHeight()+'px'
   });
-  $('.plus_btn > button').attr({'onclick' : 'content_adding()'});
+
   //   $('.plus_btn > button').remove();
   //   $('<button type="submit" name="button" onclick="content_adding('+1+changeint+')">').css(btn_css).appendTo('.plus_btn');
   //$(window).scrollTop();
   console.log($(content).offset().top);
-  $('html, body').animate({scrollTop : $(content).offset().top}, 400);
+  let v = $(content).outerHeight()*changeint;
+  console.log(changeint);
+  $('.checklength').attr({'value':1+parseInt($('.checklength').val())});
+  console.log('value : '+$('.checklength').val());
+  $('.plus_btn > button').attr({'onclick' : 'content_adding('+changeint+')'});
+  $('html, body').animate({scrollTop : v}, 400);
 };
 function content_delete(e){
   //$(this).parents('content').remove();
   console.log($('.content_main > p').css('margin'));
-  $(e).parents('.content').remove();
+  console.log($('.survey_wrap').outerHeight());
+  console.log($(e).parents('.content').outerHeight());
+  console.log($('.survey_wrap').outerHeight()-$(e).parents('.content').outerHeight());
   $('.survey_wrap').css({
-    'height':$('.survey_wrap').outerHeight()-$('.content').outerHeight()+'px'
+    'height':$('.survey_wrap').outerHeight()-($(e).parents('.content').outerHeight()+parseInt($(e).parents('.content_main').children('p').css('margin-top'))*2)+'px'
   });
+  $(e).parents('.content').remove();
+  $('.checklength').attr({'value':$('.checklength').val()-1});
+  console.log('value : '+$('.checklength').val());
+
+
 };

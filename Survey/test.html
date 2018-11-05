@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+  <title>면접플러스 - SurveyRoom</title>
+  <script src="../js/jquery-min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(window).on('load',function(){
+      $(window).scroll(function(){
+        if(checkScrollSlide()){
+          let hello = $('<div>').addClass('box').appendTo('body');
+          $(hello).css({
+            'height':'3000px'
+          });
+        }
+      });
+    });
+    // function movescroll(num){
+    //   console.log($('.div'+num).offset().top);
+    //   var scmove = $('.div'+num).offset().top;
+    //   $('html, body').animate( { scrollTop : $('.div'+num).offset().top }, 10 );
+    //   //$('html, body').animate( { scrollTop : $('.div'+num).offset().top }, 400 );
+    //   console.log($(window).scrollTop());
+    //
+    // }
+    function checkScrollSlide() {
+      var $lastBox = $('.box').last();  //맨마지막꺼 선택
+      var lastBoxDis = $lastBox.offset().top + Math.floor($lastBox.outerHeight() / 2);  //마지막 박스의 top절대값 + lastbx의 높이의 반을 내림한거
+      var scrollTop = $(window).scrollTop();
+      var documentH = $(window).height();
+      return (lastBoxDis < scrollTop + documentH) ? true : false;
+
+    }
+
+  </script>
+  <style media="screen">
+    div{
+    width: 95%;
+    height: 3000px;
+    border:1px solid black
+    }
+  </style>
+</head>
+  <body>
+    <!-- <a href="#" onclick="movescroll(1)">div1로 이동</a>
+    <a href="#" onclick="movescroll(2)">div2로 이동</a>
+    <a href="#" onclick="movescroll(3)">div3로 이동</a>
+    <a href="#" onclick="movescroll(4)">div4로 이동</a> -->
+    <div class="box">
+
+    </div>
+    <div class="box">
+
+    </div>
+    <div class="box">
+
+    </div>
+    <div class="box">
+
+    </div>
+
+  </body>
+</html>
