@@ -31,18 +31,22 @@ $(document).ready(function() {
   $('.survey_wrap').css({
     'height': $('.survey_content').outerHeight() * 1.2 + 'px'
   });
+  check_question();
 });
+var common_number = 0;
 
 function content_adding(number) {
+  console.log("The common_number number is : "+common_number);
   let changeint = 1 + number;
-
+  common_number +=1;
+  console.log("After press plus_btn The common_number number is : "+common_number);
   let content = $('<div>').addClass('content').appendTo('.content_control');
   let content_main = $('<div>').addClass('content_main').appendTo(content);
   let content_main_p = $('<p>').text('면접 질문').appendTo(content_main);
   let content_content = $('<div>').addClass('content_content row').appendTo(content_main);
   let content_content_input = $('<input type="text" name="question' + changeint + '" value="">').appendTo(content_content);
   let delete_content = $('<div>').addClass('delete_content').appendTo(content_content);
-  let delete_content_btn = $('<button type="button" name="button" onclick="content_delete(this,' + changeint + ')">').appendTo(delete_content);
+  let delete_content_btn = $('<button type="button" name="button" onclick="content_delete(this)">').appendTo(delete_content);
   console.log($('.content').outerHeight());
   $(content).css({
     'height': $('.content').outerHeight() + 'px'
@@ -84,8 +88,11 @@ function content_adding(number) {
   $('html, body').animate({
     scrollTop: v
   }, 400);
+  console.log("go_from adding");
+  check_question();
 };
-function content_delete(e, number) {
+function content_delete(e) {
+  console.log("Sub]The common_number number is : "+common_number);
   //$(this).parents('content').remove();
   // console.log($('.content_main > p').css('margin'));
   // console.log($('.survey_wrap').outerHeight());
@@ -95,8 +102,8 @@ function content_delete(e, number) {
   //   'height':$('.survey_wrap').outerHeight()-($(e).parents('.content').outerHeight()+parseInt($(e).parents('.content_main').children('p').css('margin-top'))*2)+'px'
   // });
 
-  let sub = number-1;
-  console.log(sub);
+  common_number-=1;
+
   $('.survey_wrap').css({
     'height': $('.content').last().offset().top + $('.plus_btn').outerHeight() + $('.submit_btn').outerHeight() - $('.content').last().outerHeight() + 'px'
   });
@@ -106,7 +113,21 @@ function content_delete(e, number) {
   });
   console.log('value : ' + $('.checklength').val());
   $('.plus_btn > button').attr({
-    'onclick': 'content_adding('+sub+')'
+    'onclick': 'content_adding('+common_number+')'
+  });
+  console.log("Sub] After Sub common_number and change content_adding The common_number number is : "+common_number);
+  check_question();
+};
+function check_question(){
+  let arr_length = 1;
+
+  $('.content_content').each(function(){
+    //$(this).children().attr({'name' : 'question'+arr_length});
+    $(this).find('input').attr({'name' : 'question'+arr_length});
+    console.log($(this).find('input').attr('name'));
+
+    arr_length +=1;
   });
 
-};
+  console.log('arr_length : '+arr_length);
+}

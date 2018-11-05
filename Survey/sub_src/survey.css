@@ -138,3 +138,16 @@ header > h1{
 .submit_btn > button:hover{
     box-shadow: 0 3px 5px #A5A5A5;
 }
+.important > li{
+  font-size : 1.3vw;
+}
+.agree{
+  text-align: center;
+}
+.agree > input{
+  width: 20px;
+  cursor: pointer;
+}
+.agree > input:hover{
+  box-shadow: none;
+}

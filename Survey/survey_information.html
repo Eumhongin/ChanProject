@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+  <title>면접플러스 - SurveyRoom</title>
+  <script src="../js/jquery-min.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" href="sub_src/survey.css">
+</head>
+
+<body>
+  <div class="Sub_Back">
+    <!-- 배경  #27C8BE-->
+  </div>
+  <header>
+    <div class="Back">
+      <img src="" alt="뒤로가기">
+      <a href="../index.html">뒤로가기</a>
+    </div>
+    <h1>면접플러스</h1>
+  </header>
+
+  <div class="survey_wrap">
+    <form class="survey_content" action="inform.php" method="post">
+      <p>
+        <참가자 조사지>
+      </p>
+      <hr>
+      <ul class="important">
+        <li>개인정보를 제공받는 자 : 고유니브(gouniv)</li>
+        <li>개인정보를 제공받는 자의 개인정보 이용 목적 : 설문조사 참여 보상 경품 증정 목적</li>
+        <li>제공하는 개인정보의 항목 : 성명, 이메일, 휴대전화번호</li>
+        <li>개인정보를 제공받는 자의 개인정보 보유 및 이용기간 : 2018년 12월 31일까지, 이후 개인정보 파기</li>
+        <li>개인정보의 제공 동의를 거부할 수 있으며, 거부할 경우 본 서비스 이용에 제한이 있을 수 있습니다.</li>
+      </ul>
+      <div class="agree">
+        <input class="checkbox" type="checkbox" name="" value="">
+        <p>동의함</p>
+      </div>
+      <hr>
+
+      <!-- 질문 -->
+
+        <div class="content">
+          <div class="content_main">
+            <p>이름</p>
+            <input type="text" name="name" value="">
+          </div>
+        </div>
+        <div class="content">
+          <div class="content_main">
+            <p>이메일</p>
+            <input type="email" name="email" value="">
+          </div>
+        </div>
+        <div class="content">
+          <div class="content_main">
+            <p>핸드폰 번호</p>
+            <input type="text" name="ph" value="">
+          </div>
+        </div>
+
+      <div class="submit_btn">
+        <button type="submit" name="button">보내기</button>
+      </div>
+
+
+    </form>
+
+  </div>
+
+
+  <script src="sub_src/survey.js" charset="utf-8"></script>
+</body>
+
+</html>
