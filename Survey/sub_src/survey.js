@@ -23,6 +23,7 @@ $(document).ready(function() {
       alert("개인정보 이용에 동의 하셨습니다.");
     }
 
+
   });
   $('input').css({
     'height': $('.survey_wrap').outerHeight() * 0.05 + 'px'
@@ -139,4 +140,14 @@ function check_question(){
 }
 function ischecked(){
 
+}
+function asd(){
+  
+  if($('.checkbox').is(':checked')){
+    console.log('trigger on!');
+    $('.realsubmit').trigger('click');
+  }
+  else{
+    alert('개인정보 수집에 동의해 주셔야합니다!');
+  }
 }
