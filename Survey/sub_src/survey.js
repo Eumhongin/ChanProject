@@ -18,6 +18,12 @@ $(document).ready(function() {
       'height': $(window).outerHeight() * 0.1 + 'px'
     });
   }
+  $('.checkbox').change(function(){
+    if($(this).is(':checked')){
+      alert("개인정보 이용에 동의 하셨습니다.");
+    }
+
+  });
   $('input').css({
     'height': $('.survey_wrap').outerHeight() * 0.05 + 'px'
   });
@@ -130,4 +136,7 @@ function check_question(){
   });
 
   console.log('arr_length : '+arr_length);
+}
+function ischecked(){
+
 }
