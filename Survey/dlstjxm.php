@@ -33,4 +33,5 @@ for($i = 0;$i<$arr_length;$i++){
 
 mysqli_close($conn);
 session_destroy();
+echo "<script>location.href=''</script>"
  ?>
