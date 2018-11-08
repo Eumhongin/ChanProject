@@ -63,7 +63,7 @@ function content_adding(number) {
   let content_main = $('<div>').addClass('content_main').appendTo(content);
   let content_main_p = $('<p>').text('면접 질문').appendTo(content_main);
   let content_content = $('<div>').addClass('content_content row').appendTo(content_main);
-  let content_content_input = $('<input type="text" name="question' + changeint + '" value="">').appendTo(content_content);
+  let content_content_input = $('<input type="text" name="question' + changeint + '" value="" required>').appendTo(content_content);
   let delete_content = $('<div>').addClass('delete_content').appendTo(content_content);
   let delete_content_btn = $('<button type="button" name="button" onclick="content_delete(this)">').appendTo(delete_content);
   console.log($('.content').outerHeight());
