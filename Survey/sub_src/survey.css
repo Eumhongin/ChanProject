@@ -158,9 +158,9 @@ header > h1{
   height: 50px;
   border-radius: 16px;
   background-color: #27C8BE;
-  margin-top:50%;
+  margin-top:40%;
   color: white;
-  font-size: 1.8vw;
+  font-size: 1vw;
   font-family: 'BMA';
 }
 .backtoindex:hover{
