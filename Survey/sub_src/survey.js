@@ -38,6 +38,18 @@ $(document).ready(function() {
   $('.survey_wrap').css({
     'height': $('.survey_content').outerHeight() * 1.2 + 'px'
   });
+  $('.backtoindex').css({
+    'margin-left':($('.survey_content').outerWidth()-$('.backtoindex').outerWidth())*0.5+'px'
+
+  });
+  $('.backtoindex').on('click',function(){
+    location.href = '../index.html';
+  });
+  $('header h1').on('click',function(){
+    if(confirm("내용이 저장되지 않습니다 나가시겠습니까?")){
+      location.href = 'survey.html';
+    }
+  });
   check_question();
 });
 var common_number = 0;
@@ -142,7 +154,7 @@ function ischecked(){
 
 }
 function asd(){
-  
+
   if($('.checkbox').is(':checked')){
     console.log('trigger on!');
     $('.realsubmit').trigger('click');
