@@ -15,23 +15,23 @@ mysqli_query($conn,$sql);
 $Univ = $_POST['Univ'];
 $Major = $_POST['Major'];
 $cat = count($question);
-echo $name."<br />";
-echo $email."<br />";
-echo $phonenumber."<br />";
-echo "대학교는$Univ<br />";
-echo "학과는$Major<br />";
-echo "배열의 길이는$cat<br />";
+// echo $name."<br />";
+// echo $email."<br />";
+// echo $phonenumber."<br />";
+// echo "대학교는$Univ<br />";
+// echo "학과는$Major<br />";
+// echo "배열의 길이는$cat<br />";
 
 for($i = 0;$i<$arr_length;$i++){
   $question[$i] = $_POST['question'.$i];
   $sql = "INSERT INTO survey(name,email,phonenumber,univ,Major,question) VALUES('$name','$email','$phonenumber','$Univ','$Major','$question[$i]')";
   mysqli_query($conn,$sql);
-  echo "질문 $i 는 $question[$i]<br />";
+  // echo "질문 $i 는 $question[$i]<br />";
 }
 
 
 
 mysqli_close($conn);
 session_destroy();
-echo "<script>location.href=''</script>"
+echo "<script>location.href='survey_result.html'</script>";
  ?>
